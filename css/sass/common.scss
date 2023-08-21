@@ -1,0 +1,36 @@
+$theme_bg_color:rgb(23, 218, 49);
+$theme_txt_color:white;
+body{
+    color: $theme_txt_color;
+    #header {
+        img{
+            width: 50px;
+        }
+        nav{
+            padding: 0px;
+
+            ul{
+                width: 100%;
+            }
+        }
+        
+    }
+}
+
+#secondNav{
+    background-color: grey;
+    height: 25px;
+    color: $theme_txt_color;
+}
+
+#firstNav{
+    background-color: $theme_bg_color;
+}
+
+#searchIcon{
+    color: $theme_bg_color;
+}
+
+#loginButton{
+    background-color: $theme_bg_color;
+}

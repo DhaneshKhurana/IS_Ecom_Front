@@ -1,0 +1,32 @@
+body {
+  color: white;
+}
+body #header img {
+  width: 50px;
+}
+body #header nav {
+  padding: 0px;
+}
+body #header nav ul {
+  width: 100%;
+}
+
+#secondNav {
+  background-color: grey;
+  height: 25px;
+  color: white;
+}
+
+#firstNav {
+  background-color: rgb(23, 218, 49);
+}
+
+#searchIcon {
+  color: rgb(23, 218, 49);
+}
+
+#loginButton {
+  background-color: rgb(23, 218, 49);
+}
+
+/*# sourceMappingURL=common.css.map */
