@@ -2,6 +2,9 @@ $theme_bg_color:rgb(23, 218, 49);
 $theme_txt_color:white;
 body{
     color: $theme_txt_color;
+    background-image: url("/img/background.png");
+    background-size: cover;
+    
     #header {
         img{
             width: 50px;
@@ -33,4 +36,23 @@ body{
 
 #loginButton{
     background-color: $theme_bg_color;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+#footer{
+    width: 100%;
+    background-color: $theme_bg_color;
+    position: absolute;
+    bottom: 0;
+}
+
+#women_dresses{
+    height: 350px;
+
+    img{
+        height: 350px;
+    }
 }

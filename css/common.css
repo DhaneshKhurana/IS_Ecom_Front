@@ -1,5 +1,7 @@
 body {
   color: white;
+  background-image: url("/img/background.png");
+  background-size: cover;
 }
 body #header img {
   width: 50px;
@@ -27,6 +29,24 @@ body #header nav ul {
 
 #loginButton {
   background-color: rgb(23, 218, 49);
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+#footer {
+  width: 100%;
+  background-color: rgb(23, 218, 49);
+  position: absolute;
+  bottom: 0;
+}
+
+#women_dresses {
+  height: 350px;
+}
+#women_dresses img {
+  height: 350px;
 }
 
 /*# sourceMappingURL=common.css.map */
