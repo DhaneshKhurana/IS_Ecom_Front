@@ -18,16 +18,41 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
     <link rel="stylesheet" href="/css/common.css" />
-    <title>Home</title>
+    <title>Women All</title>
   </head>
-  <body onload="includeHeader('Women')">
+  <body onload="includeHeader('Women'); checkScreenSize();">
     <div id="header"></div>
-    <div id="body">
 
+    <div id="body">
+      <div id="women_dresses" class="carousel slide" data-bs-ride="true">
+        <div class="carousel-inner">
+
+        </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#women_dresses"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#women_dresses"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
     </div>
 
     <div id="footer"></div>
 
+    <script src="/js/womenDress.js"></script>
     <!--My Custom JS-->
     <script src="/js/common.js"></script>
     <!--Bootstrap JS-->

@@ -1,6 +1,6 @@
 body {
   color: white;
-  background-image: url("/img/background.png");
+  background-image: url("/img/greenbg.jpg");
   background-size: cover;
 }
 body #header img {
@@ -14,21 +14,28 @@ body #header nav ul {
 }
 
 #secondNav {
-  background-color: grey;
+  background-color: #378338;
   height: 25px;
   color: white;
+  text-decoration-color: white;
+}
+@media (max-width: 762px) {
+  #secondNav {
+    font-size: 24px;
+    height: auto;
+  }
 }
 
 #firstNav {
-  background-color: rgb(23, 218, 49);
+  background: linear-gradient(#b3d56c, #a1cd45, #9acb3c);
 }
 
 #searchIcon {
-  color: rgb(23, 218, 49);
+  color: linear-gradient(#b3d56c, #a1cd45, #9acb3c);
 }
 
 #loginButton {
-  background-color: rgb(23, 218, 49);
+  background-color: #378338;
 }
 
 .dropdown:hover .dropdown-menu {
@@ -37,16 +44,31 @@ body #header nav ul {
 
 #footer {
   width: 100%;
-  background-color: rgb(23, 218, 49);
-  position: absolute;
+  background-color: #378338;
+  position: relative;
   bottom: 0;
 }
 
-#women_dresses {
-  height: 350px;
+.card {
+  color: black;
+  text-align: center;
+  display: inline-block;
+  margin: 2px 4px 2px 4px;
 }
-#women_dresses img {
-  height: 350px;
+.card p {
+  text-align: left;
+}
+.card img {
+  height: 180px;
+}
+
+#women_dresses .carousel-inner {
+  text-align: center;
+}
+
+button {
+  background-color: #378338;
+  color: white;
 }
 
 /*# sourceMappingURL=common.css.map */
