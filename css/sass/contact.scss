@@ -1,6 +1,21 @@
-body{
-    color: black;
+$theme_bg_color: linear-gradient(#b3d56c, #a1cd45, #9acb3c);
+$theme_bg_color_dark: #378338;
+$theme_txt_color: white;
+
+#body {
+  color: black;
+  margin: 10px 0px 10px 0px;
 }
-img{
-    width: 100%;
+img {
+  width: 100%;
+}
+
+.toast{
+  color: black;
+}
+
+#footer{
+  position: absolute;
+  bottom: 0;
+  color: white;
 }

@@ -18,13 +18,46 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
     <link rel="stylesheet" href="/css/common.css" />
+    <link rel="stylesheet" href="/css/contact.css">
     <title>Login</title>
   </head>
   <body onload="includeHeader('Contact')">
     <div id="header"></div>
+     <!-- Toasts to be shown on login submit -->
+     <div aria-live="polite" aria-atomic="true" class="position-relative">
+      <!-- Then put toasts within -->
+      <div class="toast-container top-0 start-50 translate-middle-x">
+        <div id="successToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+          <div class="toast-header">
+            <strong class="me-auto">Welcome</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close">
+              
+            </button>
+          </div>
+          <div class="toast-body">
+            Login Successful.
+          </div>
+        </div>
+
+      </div>
+
+      <div class="toast-container top-0 start-50 translate-middle-x">
+        <div id="unsuccessToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+              <strong class="me-auto">Try Again</strong>
+              <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close">
+              </button>
+            </div>
+            <div class="toast-body">
+              Sorry, Email id or password is Wrong. 
+            </div>
+          </div>
+      </div>
+
+    </div>
     <div id="body" class="container">
       <div class="row">
-        <div class="col-12 justify-content-center ">
+        <div class="col-12 justify-content-center text-center ">
           <h2>Login</h2>
         </div>
       </div>
@@ -39,46 +72,18 @@
             <label for="pwd" class="form-label">Passowrd</label>
             <input type="password" class="form-control" id="pwd" placeholder="Enter password">
           </div>
-          <button type="submit" class="btn btn-primary">Login</button>
+          <button type="submit" onclick="validateCredentials()" class="btn btn-primary col-10 offset-1 ">Login</button>
         </div>
       </div>
     </div>
 
-    <!-- Flexbox container for toasts to be shown on login submit -->
-    <div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center" style="min-height: 200px;">
-        <!-- Then put toasts within -->
-        <div id="successToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-          <div class="toast-header">
-            <strong class="me-auto">Welcome</strong>
-            <button type="button" class="ms-2 mb-1 close" data-dismiss="toast" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="toast-body">
-            Login Successful.
-          </div>
-        </div>
-
-        <div id="unsuccessToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-            <div class="toast-header">
-              <strong class="me-auto">Try Again</strong>
-              <button type="button" class="ms-2 mb-1 close" data-dismiss="toast" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="toast-body">
-              Sorry, Email id or password is Wrong. 
-            </div>
-          </div>
-      </div>
+   
     
-    
-    
-    $('.toast').toast(option)
     <div id="footer"></div>
 
     <!--My Custom JS-->
     <script src="/js/common.js"></script>
+    <script src="/js/login.js"></script>
     <!--Bootstrap JS-->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
