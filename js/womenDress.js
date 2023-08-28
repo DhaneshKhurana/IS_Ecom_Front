@@ -6,7 +6,10 @@ function createCarousel(cardsPerCarousel) {
   let innerHTML = "";
   //the fist loop is to create the carousel item
   for (let i = 0; i < noOfCarouselItem; i++) {
-    let txt = i==0?'<div class="carousel-item active">':'<div class="carousel-item">';
+    let txt =
+      i == 0
+        ? '<div class="carousel-item active">'
+        : '<div class="carousel-item">';
     //the 2nd loop is to create no. of cards inside one carousel item based upon screen size
     for (let j = 0; j < cardsPerCarousel && cardsRemaining > 0; j++) {
       txt += `<div class="card" style="width: 200px">
@@ -17,9 +20,11 @@ function createCarousel(cardsPerCarousel) {
                     <p class="card-text">
                         A beautiful dress for beautiful women. It\'s every fibre conssits of fine organic cotton. No synthetic stuff is used.
                     </p>
-                    <a href="#" class="btn btn-primary">
+                    <button class="btn btn-primary" onclick="appendItemsToCart(${cardsRemaining}, ${
+        17 - totalNoOfCards
+      }, 10, '/img/women/dresses/1 (${cardsRemaining}).webp')">
                         Add to Cart
-                    </a>
+                    </button>
                 </div>
             </div>`;
       cardsRemaining--;

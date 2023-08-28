@@ -1,28 +1,36 @@
+:root {
+  --bs-nav-link-color: white !important;
+}
+
+html,
 body {
   color: white;
-  background-image: url("/img/greenbg.jpg");
-  background-size: cover;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(45deg, #b3d56c, #a1cd45, #9acb3c, green, rgb(0, 27, 0));
 }
+html #header img,
 body #header img {
   width: 50px;
 }
+html #header nav,
 body #header nav {
   padding: 0px;
+  margin: 0px;
 }
+html #header nav ul,
 body #header nav ul {
   width: 100%;
 }
 
 #secondNav {
   background-color: #378338;
-  height: 25px;
-  color: white;
-  text-decoration-color: white;
+  font-size: 12pt;
 }
 @media (max-width: 762px) {
   #secondNav {
-    font-size: 24px;
-    height: auto;
+    font-size: 18pt;
   }
 }
 
@@ -45,8 +53,11 @@ body #header nav ul {
 #footer {
   width: 100%;
   background-color: #378338;
-  position: relative;
-  bottom: 0;
+  margin-top: 50px;
+}
+#footer div {
+  justify-content: center;
+  text-align: center;
 }
 
 .card {
@@ -69,6 +80,31 @@ body #header nav ul {
 button {
   background-color: #378338;
   color: white;
+}
+
+#body {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.toast {
+  color: black;
+}
+
+li {
+  align-items: center;
+}
+
+a.nav-link {
+  color: white;
+}
+
+a.nav-link:active {
+  font-weight: bold;
+  font-size: larger;
 }
 
 /*# sourceMappingURL=common.css.map */
