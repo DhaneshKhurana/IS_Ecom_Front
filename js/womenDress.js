@@ -12,7 +12,7 @@ function createCarousel(cardsPerCarousel) {
         : '<div class="carousel-item">';
     //the 2nd loop is to create no. of cards inside one carousel item based upon screen size
     for (let j = 0; j < cardsPerCarousel && cardsRemaining > 0; j++) {
-      txt += `<div class="card" style="width: 200px">
+      txt += `<div class="card">
                 <img src="/img/women/dresses/1 (${cardsRemaining}).webp" class="card-img-top" alt="..." />
                 <div class="card-body">
                     <h5 class="card-title">Dress ${17 - totalNoOfCards} </h5>
@@ -20,9 +20,9 @@ function createCarousel(cardsPerCarousel) {
                     <p class="card-text">
                         A beautiful dress for beautiful women. It\'s every fibre conssits of fine organic cotton. No synthetic stuff is used.
                     </p>
-                    <button class="btn btn-primary" onclick="appendItemsToCart(${cardsRemaining}, ${
+                    <button class="btn btn-primary" id="cartButton" onclick="appendItemsToCart(${cardsRemaining}, ${
         17 - totalNoOfCards
-      }, 10, '/img/women/dresses/1 (${cardsRemaining}).webp')">
+      }, 10, '/img/women/dresses/1 (${cardsRemaining}).webp'); addClass(this, 'disabled')">
                         Add to Cart
                     </button>
                 </div>
@@ -34,22 +34,29 @@ function createCarousel(cardsPerCarousel) {
   }
   let elem = document.querySelector("div.carousel-inner");
   if (elem) {
-    console.log("badhai ho, kuchh toh mil gya hai ");
+    //console.log("womendress:: Found inner carousel");
     elem.innerHTML = innerHTML;
   } else {
-    console.log("Sorry bro, kuchh kuchh bhi nahi mil paya");
+    console.log("womendress:: inner carousel not found");
   }
+}
+
+//general purpose function to add any class to any element
+function addClass(HtmlElem, cls){
+  HtmlElem.classList.add(cls);
 }
 
 //checking the screensize and acccoridng to that planning the layout of the dresses
 function checkScreenSize() {
-  // Add event listener for resizing the window
+  // Added event listener for resizing the window. Looking for its optimisation
   window.addEventListener("resize", checkScreenSize);
 
   if (window.matchMedia("(max-width: 576px)").matches) {
     createCarousel(1);
   } else if (window.matchMedia("(max-width: 768px)").matches) {
     createCarousel(2);
+  }else if (window.matchMedia("(max-width: 996px)").matches) {
+    createCarousel(3);
   } else {
     createCarousel(4);
   }

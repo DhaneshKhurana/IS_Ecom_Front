@@ -4,7 +4,7 @@ function createGrid(cardsPerCarousel) {
     let innerHTML = "";
   
     for (let i = 0; i < totalNoOfCards; i++) {
-        innerHTML += `<div class="col-12 col-sm-6 col-md-3">
+        innerHTML += `<div class="col-12 col-sm-6 col-md-4 col-lg-3 ">
         <div class="card">
           <img
             src="/img/women/dresses/1 (${i+1}).webp"
@@ -18,7 +18,7 @@ function createGrid(cardsPerCarousel) {
               A beautiful dress for beautiful women. It's every fibre
               conssits of fine organic cotton. No synthetic stuff is used.
             </p>
-            <a href="#" class="btn btn-primary"> Add to Cart </a>
+            <button class="btn btn-primary" id="cartButton" onclick="appendItemsToCart('Dress ${i+1}', 'Dress ${i+1}', 10, '/img/women/dresses/1 (${i+1}).webp'); addClass(this, 'disabled')"> Add to Cart </button>
           </div>
         </div>
       </div>`;
@@ -30,5 +30,9 @@ function createGrid(cardsPerCarousel) {
     } else {
       console.log("Sorry bro, kuchh kuchh bhi nahi mil paya");
     }
+  }
+
+  function addClass(HtmlElem, cls){
+    HtmlElem.classList.add(cls);
   }
   

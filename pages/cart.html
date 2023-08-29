@@ -14,23 +14,28 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="/css/common.css" />
-    <link rel="stylesheet" href="/css/contact.css" />
 
     <script src="https://use.fontawesome.com/da7b08ed85.js"></script>
     <title>Cart</title>
+    <style>
+      div.input-group{
+        padding: 5px;
+        width: 150px;
+      }
+    </style>
   </head>
-  <body onload="includeHeader('Home'); buildCart();">
+  <body onload="includeHeader('Cart'); buildCart();">
     <div id="header"></div>
 
-    <div id="body" class="p-5">
-      <div class="row">
-        <div class="col-12 col-sm-8">
+    <div id="body">
+      <div class="row w-100">
+        <div class="col-12 col-sm-9">
           <div class="card text-bg-light w-100">
             <div class="card-header card-title text-center">Items in Cart</div>
             <div class="card-body" id="card-items"></div>
           </div>
         </div>
-        <div class="col-12 col-sm-4">
+        <div class="col-12 col-sm-3">
           <div class="card text-bg-light w-100">
             <div class="card-header card-title text-center">Summary</div>
             <div class="card-body">
@@ -47,8 +52,8 @@
                 <div class="col-8 text-start">Total</div>
                 <div class="col-4 text-end" id="totalCost">$</div>
               </div>
-              <div class="row m-5">
-                <div class="col-8 offset-2">
+              <div class="row m-3">
+                <div class="col-12">
                   <button class="btn btn-primary">Checkout</button>
                 </div>
               </div>

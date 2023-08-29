@@ -2,7 +2,7 @@ $theme_bg_color: linear-gradient(#b3d56c, #a1cd45, #9acb3c);
 $theme_bg_color_dark: #378338;
 $theme_txt_color: white;
 
-//overriding bootstrap css here but didn't work
+//overriding bootstrap css here but didn't work!!!
 :root {
   --bs-nav-link-color: white !important;
 }
@@ -14,27 +14,32 @@ body {
   display: flex;
   flex-direction: column;
   background: linear-gradient(
-    45deg,
+    10deg,
     #b3d56c,
     #a1cd45,
     #9acb3c,
     green,
-    rgb(0, 27, 0)
+    rgb(0, 70, 0),
+    rgb(4, 43, 13)
   );
-  #header {
-    img {
-      width: 50px;
-    }
+}
 
-    nav {
-      padding: 0px;
-      margin: 0px;
+#header {
+  img {
+    width: 50px;
+  }
+  nav {
+    padding: 0px;
+    margin: 0px;
 
-      ul {
-        width: 100%;
-      }
+    ul {
+      width: 100%;
     }
   }
+}
+
+#firstNav {
+  background: $theme_bg_color;
 }
 
 #secondNav {
@@ -45,16 +50,17 @@ body {
   }
 }
 
-#firstNav {
-  background: $theme_bg_color;
+a.nav-link{
+  color: $theme_txt_color;
+}
+
+a:hover{
+  font-weight: bold;
+  color: black !important;
 }
 
 #searchIcon {
   color: $theme_bg_color;
-}
-
-#loginButton {
-  background-color: $theme_bg_color_dark;
 }
 
 .dropdown:hover .dropdown-menu {
@@ -64,7 +70,7 @@ body {
 #footer {
   width: 100%;
   background-color: $theme_bg_color_dark;
-  margin-top: 50px;
+  margin-top: 10px;
   div{
     justify-content: center;
     text-align: center;
@@ -75,30 +81,39 @@ body {
   color: black;
   text-align: center;
   display: inline-block;
-  margin: 2px 4px 2px 4px;
+  margin: 5px;
   p {
     text-align: left;
   }
   img {
     height: 180px;
+    width: 100%;
   }
 }
 
 #women_dresses {
   .carousel-inner {
     text-align: center;
+    .card{
+      width: 200px;
+    }
   }
 }
 
-button {
+#loginButton, #cartButton, #contactButton {
   background-color: $theme_bg_color_dark;
   color: $theme_txt_color;
 }
 
+#cartIcon{
+  margin-left: 10px;
+  align-items: center;
+  color: $theme_txt_color;
+}
+
 #body {
-  //min-height: 70vh;
-  flex: 1;
   display: flex;
+  flex: 1;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -112,11 +127,17 @@ li{
   align-items: center;
 }
 
-a.nav-link{
-  color: $theme_txt_color;
+i:hover{
+  cursor: pointer;
 }
 
-a.nav-link:active{
-  font-weight: bold;
-  font-size: larger;
+button:hover{
+  cursor: pointer;
+  background-color: #b3d56c !important;
+  color: black !important;
 }
+
+div.card-body{
+  padding: 5px !important;
+}
+
