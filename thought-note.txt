@@ -1,0 +1,41 @@
+Title: Capstone Project Front End (Full Stack Development Part 1)
+
+Summary:
+Hi,
+Muy name is Dhanesh Khurana. This is the first time, I am buiding a front-end project and writing a thought note 
+of which I have very little knowledge and experience. But I am always open to learning. 
+Pardon me, and let me know wherever I make mistake or improvemnet can be made.
+It's been ten days, since I have been working solely on this project. I am not good at drawing, painting or 
+color selection. So, pardon my UI sense. 
+But I have tried enought to include all functionalities and interactivity.
+
+Technical Summary:
+This project has been divided into many parts. viz:
+    i) components:
+        This folder containg small components of html like header and footer which are dynamically included on each page. 
+    ii) css:
+        I have used SASS here which is compiled to CSS and included in each web-page.
+    iii) js:
+        This folder contain all the javascript code. "Common.js" is file which hosts some common functions and 
+        hence is incuded in all web-pages.
+        Header and footer are also included using includeHedaer() function.
+    iv) pages:
+        This folder contains all the web-pages like login.html except home-page which is coded in index.html file and placed at
+        root folder.
+    v) img:
+        This folder contain all the images used in this project. Please forgive me for not using unique images in 
+        each web-page. It was getting very hectic and tiresome to download and use images with unique URLs 
+        everywhere. So instead I downloaded 16 pictures named then in numbers and included then in each page 
+        using simple javascript.
+
+I have installed and used http-server to deploy my project locally using npm. As far as I could check in this 
+tiersome condition, I did and everything was working flawlessly and was fully responsive.
+But still, if anyI had any mistake, please let me know.
+One thing, I was still struggling with was overriding bootstrap variables. Due to lack of time I could not complete
+that experiment, but yet I have made sure through work-arounds that everything works fine.
+Thankyou.
+
+I have also used git and github. Here's the link to the same project on github.
+https://github.com/DhaneshKhurana/IS_Ecom_Front
+
+
